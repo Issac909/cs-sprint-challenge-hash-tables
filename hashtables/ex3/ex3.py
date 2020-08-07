@@ -3,6 +3,18 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
+    dictionary = {}
+    results = []
+    
+    for little_arr in arrays:
+        for x in little_arr:
+            if x not in dictionary:
+                dictionary[x] = 1
+                
+            else:
+                results.append(x)
+                
+    result = list(dict.fromkeys(results))
 
     return result
 
